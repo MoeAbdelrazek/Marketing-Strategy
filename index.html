@@ -1,0 +1,1420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCC Growth Agency | Strategy, Branding, Websites, Performance Marketing</title>
+  <meta name="description" content="A GCC-first marketing agency built to deliver measurable growth with clear deliverables, transparent reporting, and premium execution. UAE launch, GCC scale." />
+  <meta name="theme-color" content="#0f2a2b" />
+
+  <!-- Optional premium fonts (safe for GitHub Pages). Remove if you prefer system fonts only. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --surface: #f7f8fa;
+      --card: #ffffff;
+      --text: #0e1b1c;
+      --muted: #4d5b5c;
+      --border: rgba(14,27,28,.12);
+      --shadow: 0 14px 40px rgba(14,27,28,.10);
+      --shadow-soft: 0 8px 24px rgba(14,27,28,.08);
+      --brand: #0f6b6e;       /* teal */
+      --brand-2: #2f86ff;     /* blue */
+      --accent: #ffb020;      /* warm accent */
+      --success: #1d9b6c;
+      --danger: #d64545;
+
+      --radius: 18px;
+      --radius-lg: 28px;
+      --max: 1160px;
+
+      --font-head: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+      --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--text);
+      background: radial-gradient(900px 500px at 10% 0%, rgba(47,134,255,.10), transparent 60%),
+                  radial-gradient(800px 420px at 90% 10%, rgba(15,107,110,.12), transparent 60%),
+                  var(--bg);
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    h1, h2, h3 { margin: 0; letter-spacing: -0.02em; }
+    h1 { font-family: var(--font-head); font-size: clamp(34px, 4vw, 54px); line-height: 1.08; }
+    h2 { font-family: var(--font-head); font-size: clamp(26px, 3vw, 38px); line-height: 1.15; }
+    h3 { font-size: 18px; line-height: 1.25; }
+
+    .container{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .pill{
+      display: inline-flex; gap: 10px; align-items: center;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(15,107,110,.10);
+      border: 1px solid rgba(15,107,110,.22);
+      color: rgba(14,27,28,.86);
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .dot{
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 6px rgba(29,155,108,.12);
+    }
+
+    /* Header */
+    header{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    .brand{
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .logo{
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(15,107,110,1), rgba(47,134,255,1));
+      box-shadow: 0 10px 18px rgba(15,107,110,.20);
+      position: relative;
+      overflow: hidden;
+    }
+    .logo:after{
+      content: "";
+      position: absolute; inset: -12px -24px auto auto;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(255,255,255,.22);
+      transform: rotate(15deg);
+    }
+    nav ul{
+      display: flex; gap: 16px; list-style: none; padding: 0; margin: 0;
+      flex-wrap: wrap;
+    }
+    nav a{
+      font-weight: 600;
+      color: rgba(14,27,28,.82);
+      padding: 8px 10px;
+      border-radius: 12px;
+      transition: background .18s ease, color .18s ease;
+    }
+    nav a:hover{ background: rgba(15,107,110,.08); color: rgba(14,27,28,.96); }
+    .nav-cta{
+      display: inline-flex; gap: 10px; align-items: center;
+    }
+
+    /* Buttons */
+    .btn{
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.82);
+      color: rgba(14,27,28,.92);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+      box-shadow: 0 10px 22px rgba(14,27,28,.08);
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 14px 26px rgba(14,27,28,.12); }
+    .btn.primary{
+      border: 1px solid rgba(15,107,110,.30);
+      background: linear-gradient(135deg, rgba(15,107,110,1), rgba(47,134,255,1));
+      color: white;
+      box-shadow: 0 16px 34px rgba(15,107,110,.22);
+    }
+    .btn.primary:hover{ box-shadow: 0 18px 38px rgba(15,107,110,.28); }
+    .btn.small{ padding: 10px 12px; border-radius: 12px; font-size: 14px; }
+    .btn.link{
+      background: transparent; border: none; box-shadow: none;
+      padding: 10px 10px;
+      color: rgba(14,27,28,.84);
+    }
+    .btn.link:hover{ background: rgba(15,107,110,.08); }
+
+    /* Hero */
+    .hero{
+      padding: 56px 0 34px;
+    }
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 26px;
+      align-items: start;
+    }
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.78));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-card:before{
+      content: "";
+      position: absolute; inset: -80px -120px auto auto;
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(47,134,255,.22), rgba(15,107,110,.14), transparent 65%);
+      filter: blur(2px);
+    }
+    .hero-top{
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .hero h1{ margin-bottom: 10px; }
+    .hero .lead{
+      font-size: 16px;
+      color: rgba(14,27,28,.78);
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display: flex; gap: 12px; flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .trust-row{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .trust{
+      background: rgba(247,248,250,.86);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: var(--shadow-soft);
+      min-height: 82px;
+    }
+    .trust .k{
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 16px;
+    }
+    .trust .s{
+      color: rgba(77,91,92,.92);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    /* Side panel */
+    .side{
+      display: grid;
+      gap: 14px;
+    }
+    .side-card{
+      background: rgba(255,255,255,.90);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+    .side-card h3{ margin-bottom: 8px; }
+    .checklist{ display: grid; gap: 10px; margin-top: 10px; }
+    .check{
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 14px;
+      color: rgba(14,27,28,.80);
+    }
+    .check svg{ flex: 0 0 auto; margin-top: 2px; }
+    .mini{
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .mini span{
+      font-size: 12px; font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(247,248,250,.90);
+      color: rgba(14,27,28,.78);
+    }
+
+    /* Section base */
+    section{ padding: 48px 0; }
+    .section-head{
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .section-head p{ max-width: 72ch; margin: 8px 0 0; }
+    .grid-3{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: rgba(255,255,255,.94);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover{ box-shadow: var(--shadow); }
+    .badge{
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(47,134,255,.10);
+      border: 1px solid rgba(47,134,255,.22);
+      color: rgba(14,27,28,.86);
+    }
+    .muted{ color: rgba(77,91,92,.90); }
+
+    /* System map */
+    .system{
+      background: linear-gradient(180deg, rgba(247,248,250,.90), rgba(255,255,255,.80));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .map{
+      margin-top: 16px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .map-grid{
+      display: grid;
+      grid-template-columns: 1fr 44px 1fr 44px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .node{
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(247,248,250,.75);
+      box-shadow: var(--shadow-soft);
+      min-height: 128px;
+    }
+    .node h3{ margin-bottom: 6px; }
+    .node ul{
+      margin: 10px 0 0; padding-left: 16px; color: rgba(77,91,92,.95);
+      font-size: 13px;
+    }
+    .arrow{
+      display: grid; place-items: center;
+      color: rgba(14,27,28,.55);
+    }
+    .arrow svg{ opacity: .8; }
+
+    /* Packages */
+    .packages{
+      background: rgba(247,248,250,.60);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .price{
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-top: 8px;
+      color: rgba(14,27,28,.92);
+    }
+    .price small{
+      font-size: 12px;
+      font-weight: 800;
+      color: rgba(77,91,92,.90);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .includes{
+      display: grid; gap: 10px; margin-top: 14px;
+      font-size: 14px;
+    }
+    .includes .item{
+      display: flex; gap: 10px; align-items: flex-start;
+      color: rgba(14,27,28,.84);
+    }
+    .hr{
+      height: 1px; background: rgba(14,27,28,.10);
+      margin: 14px 0;
+    }
+    .note{
+      font-size: 12px;
+      color: rgba(77,91,92,.92);
+      margin-top: 10px;
+    }
+    .highlight{
+      outline: 2px solid rgba(15,107,110,.20);
+      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.86));
+      position: relative;
+    }
+    .highlight:before{
+      content: "Most Popular";
+      position: absolute;
+      top: 14px; right: 14px;
+      font-size: 12px; font-weight: 900;
+      color: rgba(15,107,110,.95);
+      background: rgba(15,107,110,.12);
+      border: 1px solid rgba(15,107,110,.22);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    /* Service menu table */
+    .table{
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: rgba(255,255,255,.94);
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td{
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(14,27,28,.08);
+      text-align: left;
+      vertical-align: top;
+    }
+    th{
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(77,91,92,.92);
+      background: rgba(247,248,250,.90);
+    }
+    tr:last-child td{ border-bottom: none; }
+    td .sub{ font-size: 12px; color: rgba(77,91,92,.90); margin-top: 4px; }
+
+    /* Proof */
+    .proof{
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+      margin-top: 16px;
+    }
+    .quote{
+      border-left: 4px solid rgba(15,107,110,.50);
+      padding-left: 12px;
+      margin-top: 10px;
+      color: rgba(14,27,28,.80);
+    }
+    .metric{
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+      margin-top: 12px;
+    }
+    .metric .m{
+      background: rgba(247,248,250,.90);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: var(--shadow-soft);
+    }
+    .metric .m .v{ font-weight: 900; font-size: 18px; letter-spacing: -0.02em; }
+    .metric .m .l{ font-size: 12px; color: rgba(77,91,92,.92); margin-top: 4px; }
+
+    /* FAQ */
+    .faq{
+      background: rgba(247,248,250,.55);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .accordion{
+      display: grid; gap: 10px;
+      margin-top: 16px;
+    }
+    details{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.94);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+    summary{
+      padding: 14px 16px;
+      cursor: pointer;
+      font-weight: 800;
+      color: rgba(14,27,28,.92);
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display: none; }
+    details .content{
+      padding: 0 16px 14px;
+      color: rgba(77,91,92,.95);
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta{
+      padding: 54px 0;
+    }
+    .cta-wrap{
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 14px;
+      align-items: start;
+      background: linear-gradient(135deg, rgba(15,107,110,.12), rgba(47,134,255,.10));
+      border: 1px solid rgba(14,27,28,.12);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .form{
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+    label{
+      display: block;
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(77,91,92,.92);
+      font-weight: 800;
+      margin: 10px 0 6px;
+    }
+    input, select, textarea{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(14,27,28,.16);
+      background: rgba(247,248,250,.92);
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border .14s ease, box-shadow .14s ease;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(47,134,255,.55);
+      box-shadow: 0 0 0 6px rgba(47,134,255,.12);
+    }
+    textarea{ min-height: 92px; resize: vertical; }
+    .form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-actions{
+      margin-top: 12px;
+      display: flex; gap: 10px; flex-wrap: wrap;
+      align-items: center;
+    }
+    .fine{
+      font-size: 12px;
+      color: rgba(77,91,92,.92);
+    }
+    .toast{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(29,155,108,.26);
+      background: rgba(29,155,108,.10);
+      color: rgba(14,27,28,.88);
+      font-weight: 700;
+      display: none;
+    }
+
+    /* Footer */
+    footer{
+      padding: 28px 0 34px;
+      color: rgba(77,91,92,.92);
+    }
+    .footer-grid{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 14px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-grid a{ color: rgba(77,91,92,.92); }
+    .footer-grid a:hover{ color: rgba(14,27,28,.92); }
+    .small{ font-size: 12px; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .map-grid{ grid-template-columns: 1fr; }
+      .arrow{ display: none; }
+      .trust-row{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .pricing-grid{ grid-template-columns: 1fr; }
+      .proof{ grid-template-columns: 1fr; }
+      .cta-wrap{ grid-template-columns: 1fr; }
+      .footer-grid{ grid-template-columns: 1fr; }
+      nav ul{ display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>GCC Growth Agency</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#system">How it works</a></li>
+          <li><a href="#packages">Plans</a></li>
+          <li><a href="#services">Service menu</a></li>
+          <li><a href="#proof">Proof</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn link small" href="#packages">View plans</a>
+        <a class="btn primary small" href="#contact">Book a discovery call</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-card">
+          <div class="hero-top">
+            <span class="pill"><span class="dot" aria-hidden="true"></span>UAE launch, built to scale across GCC</span>
+            <span class="pill" style="background: rgba(255,176,32,.14); border-color: rgba(255,176,32,.32);">
+              Clear deliverables. Transparent reporting. Premium execution.
+            </span>
+          </div>
+
+          <h1>A marketing system that clients can trust, measure, and scale</h1>
+          <p class="lead">
+            We are a GCC-first agency built for decision makers who want clean strategy, high-quality delivery,
+            and performance that is reported like a business, not like a social page.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">
+              <span aria-hidden="true">📞</span> Book a discovery call
+            </a>
+            <a class="btn" href="#system">
+              <span aria-hidden="true">🧭</span> See the marketing system
+            </a>
+          </div>
+
+          <div class="trust-row" aria-label="Trust highlights">
+            <div class="trust">
+              <div class="k">Strategy first</div>
+              <div class="s">One plan across SEO, ads, content, social, email.</div>
+            </div>
+            <div class="trust">
+              <div class="k">Measured delivery</div>
+              <div class="s">Fixed cadence: weekly ops, monthly reporting and roadmap.</div>
+            </div>
+            <div class="trust">
+              <div class="k">Market-fit</div>
+              <div class="s">UAE-first execution with GCC expansion playbook.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side" aria-label="Right panel highlights">
+          <div class="side-card">
+            <h3>What we fix (fast)</h3>
+            <p>Common client pain points in UAE and GCC markets.</p>
+            <div class="checklist">
+              <div class="check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Vague deliverables and unclear ownership
+              </div>
+              <div class="check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Ad spend waste, weak targeting, weak landing pages
+              </div>
+              <div class="check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Vanity metrics, no funnel clarity, no KPI alignment
+              </div>
+              <div class="check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Slow cycles, inconsistent content, missing cadence
+              </div>
+            </div>
+
+            <div class="mini" aria-label="Service highlights">
+              <span>Branding</span>
+              <span>Website Build</span>
+              <span>SEO</span>
+              <span>PPC</span>
+              <span>Social</span>
+              <span>Email</span>
+              <span>PR</span>
+              <span>Strategy</span>
+            </div>
+          </div>
+
+          <div class="side-card">
+            <h3>Best fit clients</h3>
+            <p class="muted">Two buyer types, one delivery system.</p>
+            <div class="hr"></div>
+            <p><strong>New brands</strong>: branding + website + launch marketing built together.</p>
+            <p><strong>Existing brands</strong>: audit, restructure, optimize, scale.</p>
+            <div class="hr"></div>
+            <a class="btn primary" href="#packages">Explore plans</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="system" class="system">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>How our marketing system works</h2>
+          <p>
+            One operating system that connects strategy, production, distribution, and measurement.
+            This is how everything fits together across UAE first, then GCC.
+          </p>
+        </div>
+        <a class="btn small" href="#contact">Get a tailored roadmap</a>
+      </div>
+
+      <div class="map" role="region" aria-label="Marketing system map">
+        <div class="map-grid">
+
+          <div class="node">
+            <span class="badge">Step 1: Diagnose</span>
+            <h3 style="margin-top:10px;">Growth Readiness Audit</h3>
+            <ul>
+              <li>Tracking, attribution, KPIs</li>
+              <li>Channel performance review</li>
+              <li>Offer and funnel gaps</li>
+              <li>90-day roadmap and priorities</li>
+            </ul>
+          </div>
+
+          <div class="arrow" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="node">
+            <span class="badge" style="background: rgba(15,107,110,.10); border-color: rgba(15,107,110,.22);">Step 2: Build</span>
+            <h3 style="margin-top:10px;">Brand + Website Foundation</h3>
+            <ul>
+              <li>Positioning, messaging, tone</li>
+              <li>Identity essentials and guidelines</li>
+              <li>Website build (conversion-first)</li>
+              <li>Content architecture and CTAs</li>
+            </ul>
+          </div>
+
+          <div class="arrow" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="node">
+            <span class="badge" style="background: rgba(255,176,32,.14); border-color: rgba(255,176,32,.32);">Step 3: Scale</span>
+            <h3 style="margin-top:10px;">Launch + Optimize</h3>
+            <ul>
+              <li>SEO, PPC, social, email, content</li>
+              <li>Weekly operations and optimizations</li>
+              <li>Monthly performance report</li>
+              <li>Testing plan and growth roadmap</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="grid-3" style="margin-top: 12px;">
+          <div class="card">
+            <h3>For new brands</h3>
+            <p>
+              We package branding and website building inside the marketing plan so launch is structured,
+              not piecemeal. This prevents wasted spend and inconsistent messaging.
+            </p>
+          </div>
+          <div class="card">
+            <h3>For existing brands</h3>
+            <p>
+              We start with an audit, fix measurement and funnel issues, then scale what works using
+              a disciplined testing rhythm.
+            </p>
+          </div>
+          <div class="card">
+            <h3>For UAE then GCC</h3>
+            <p>
+              UAE execution becomes your baseline system. Expansion is a controlled rollout with localized
+              messaging, targeting, and channel mix per country.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages" class="packages">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Plans that clients can actually buy</h2>
+          <p>
+            Average-market pricing, premium standards. Clear deliverables, clean reporting, and a system that scales.
+            New brands get branding and website building included.
+          </p>
+        </div>
+        <span class="pill" title="Pricing note">Initial launch pricing. Scope confirmed after discovery.</span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Launch -->
+        <div class="card">
+          <span class="badge">Launch System (new brands)</span>
+          <div class="price">AED 12,500 <small>/ month</small></div>
+          <p class="muted">Best for new brands that need branding + website + marketing in one plan.</p>
+
+          <div class="hr"></div>
+
+          <div class="includes" aria-label="Launch plan includes">
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Brand foundation: positioning, messaging, tone, guidelines (month 1)
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Website build: 5 pages, conversion-first sections, lead form (month 1 to 2)
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Social: 12 posts per month + calendar
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              PPC starter management + weekly optimization (ad spend excluded)
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Monthly reporting + next-month growth roadmap
+            </div>
+          </div>
+
+          <p class="note">
+            Minimum term: 3 months. Website and branding delivered within first 45 to 60 days based on approvals.
+          </p>
+
+          <div class="hr"></div>
+          <a class="btn primary" href="#contact">Get Launch plan proposal</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="card highlight">
+          <span class="badge" style="background: rgba(15,107,110,.10); border-color: rgba(15,107,110,.22);">Growth System (existing brands)</span>
+          <div class="price">AED 6,500 <small>/ month</small></div>
+          <p class="muted">Best for brands with existing presence that need performance rebuild and scaling.</p>
+
+          <div class="hr"></div>
+
+          <div class="includes" aria-label="Growth plan includes">
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Audit and fix: tracking, KPIs, funnel gaps (week 1 to 2)
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              PPC management + conversion optimization recommendations
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              SEO monthly: technical checklist + content briefs + on-page improvements
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Content and social coordination (calendar + distribution)
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Monthly report: insights + testing plan + next 30-day roadmap
+            </div>
+          </div>
+
+          <p class="note">
+            Minimum term: 3 months. Designed for measurable improvement by month 2, then controlled scaling.
+          </p>
+
+          <div class="hr"></div>
+          <a class="btn primary" href="#contact">Get Growth plan proposal</a>
+        </div>
+
+        <!-- Scale -->
+        <div class="card">
+          <span class="badge" style="background: rgba(47,134,255,.10); border-color: rgba(47,134,255,.22);">Scale System (multi-market)</span>
+          <div class="price">AED 12,000 <small>/ month</small></div>
+          <p class="muted">Best for brands expanding across UAE and GCC with multi-channel performance needs.</p>
+
+          <div class="hr"></div>
+
+          <div class="includes" aria-label="Scale plan includes">
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Multi-market strategy: UAE baseline, GCC rollout plan by country
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              PPC + social paid + landing page optimization support
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              SEO scaling: technical, content architecture, growth pages
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Email: 4 campaigns per month + list growth guidance
+            </div>
+            <div class="item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Reporting: executive summary + channel deep dives
+            </div>
+          </div>
+
+          <p class="note">
+            Minimum term: 3 months. Recommended for brands spending consistently on paid media and scaling regions.
+          </p>
+
+          <div class="hr"></div>
+          <a class="btn primary" href="#contact">Get Scale plan proposal</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 14px;">
+        <span class="badge">One-time Entry Offer</span>
+        <h3 style="margin-top: 10px;">Growth Readiness Audit (project)</h3>
+        <p>
+          A structured diagnosis with a 90-day plan. Ideal when you want clarity before committing to retainers.
+        </p>
+        <div class="metric" aria-label="Audit highlights">
+          <div class="m">
+            <div class="v">AED 7,500</div>
+            <div class="l">Project fee</div>
+          </div>
+          <div class="m">
+            <div class="v">7 days</div>
+            <div class="l">Typical delivery</div>
+          </div>
+          <div class="m">
+            <div class="v">90-day plan</div>
+            <div class="l">Roadmap and priorities</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICE MENU -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Service menu and average-market pricing</h2>
+          <p>
+            Clear menu pricing for clarity and trust. Retainers and projects are scoped with deliverables and timelines.
+            Paid media fees exclude ad spend unless stated.
+          </p>
+        </div>
+        <a class="btn small" href="#contact">Ask for a tailored quote</a>
+      </div>
+
+      <div class="table" role="region" aria-label="Service menu table">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 22%;">Service line</th>
+              <th style="width: 26%;">What is included</th>
+              <th style="width: 26%;">Average-market pricing</th>
+              <th style="width: 26%;">Best for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Digital Marketing Retainer</strong><div class="sub">Strategy + coordination</div></td>
+              <td>Monthly plan, channel coordination, reporting, roadmap</td>
+              <td><strong>AED 2,500 to 4,500 / month</strong><div class="sub">Depends on channels and volume</div></td>
+              <td>Brands that need a single accountable growth owner</td>
+            </tr>
+            <tr>
+              <td><strong>Branding Foundation</strong><div class="sub">Positioning + messaging</div></td>
+              <td>Workshop, messaging, identity essentials, guidelines</td>
+              <td><strong>AED 9,000 / project</strong><div class="sub">Upgrade: AED 15,000 for full identity system</div></td>
+              <td>New brands or rebrands that need clarity and consistency</td>
+            </tr>
+            <tr>
+              <td><strong>Website Build</strong><div class="sub">Conversion-first site</div></td>
+              <td>5-page website, conversion structure, lead capture, basic SEO setup</td>
+              <td><strong>AED 12,000 / project</strong><div class="sub">Landing page: AED 1,500</div></td>
+              <td>New brands and campaigns that need a proper conversion layer</td>
+            </tr>
+            <tr>
+              <td><strong>SEO</strong><div class="sub">Monthly growth</div></td>
+              <td>Technical checklist, on-page work, content briefs, reporting</td>
+              <td><strong>AED 1,800 / month</strong><div class="sub">Minimum term: 3 months</div></td>
+              <td>Brands that want predictable organic growth and compounding traffic</td>
+            </tr>
+            <tr>
+              <td><strong>Social Media</strong><div class="sub">Content system</div></td>
+              <td>12 posts/month, calendar, basic community management, reporting</td>
+              <td><strong>AED 3,500 / month</strong><div class="sub">Volume can scale with tier</div></td>
+              <td>Brands that need consistency and strong creative direction</td>
+            </tr>
+            <tr>
+              <td><strong>Email Marketing</strong><div class="sub">Campaigns</div></td>
+              <td>4 campaigns/month, copy + design, reporting</td>
+              <td><strong>AED 2,500 / month</strong><div class="sub">List cleanup guidance included</div></td>
+              <td>Brands that want repeat customers and stronger conversion</td>
+            </tr>
+            <tr>
+              <td><strong>Content Marketing</strong><div class="sub">SEO content</div></td>
+              <td>6 articles/month, optimization, publishing support</td>
+              <td><strong>AED 900 / month</strong><div class="sub">Extra: AED 150 per article</div></td>
+              <td>Brands that need authority and inbound lead generation</td>
+            </tr>
+            <tr>
+              <td><strong>PPC Management</strong><div class="sub">Performance</div></td>
+              <td>Setup or restructure, optimization, reporting</td>
+              <td><strong>AED 1,500 / month</strong><div class="sub">Hybrid: +10% of spend above AED 20,000</div></td>
+              <td>Brands that need leads and sales with controlled spend</td>
+            </tr>
+            <tr>
+              <td><strong>Media Planning</strong><div class="sub">Budget allocation</div></td>
+              <td>Plan, flighting, channel mix, KPIs, measurement design</td>
+              <td><strong>AED 7,500 / project</strong><div class="sub">Execution scoped separately</div></td>
+              <td>Brands scaling spend and needing structured planning</td>
+            </tr>
+            <tr>
+              <td><strong>PR (starting)</strong><div class="sub">Reputation and coverage</div></td>
+              <td>PR strategy, press releases, outreach, monthly coverage report</td>
+              <td><strong>AED 20,000 / month (starting)</strong><div class="sub">Scope depends on media targets</div></td>
+              <td>Brands needing authority, trust, and controlled public narrative</td>
+            </tr>
+            <tr>
+              <td><strong>Market Research (starting)</strong><div class="sub">Decision support</div></td>
+              <td>Research plan, interviews or surveys, competitor analysis, findings report</td>
+              <td><strong>AED 18,000 / project (starting)</strong><div class="sub">Large studies scoped separately</div></td>
+              <td>Brands that need confident decisions before scaling</td>
+            </tr>
+            <tr>
+              <td><strong>Digital Strategy Sprint</strong><div class="sub">90-day roadmap</div></td>
+              <td>Discovery workshop, funnel plan, channel strategy, KPI model</td>
+              <td><strong>AED 7,500 / project</strong><div class="sub">Ideal before retainers</div></td>
+              <td>Owners who want clarity and a structured plan immediately</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">
+        Note: These are initial average-market rates designed for UAE entry and GCC expansion. Final scope is confirmed after discovery.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="proof">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Why clients choose us</h2>
+          <p>
+            Most agencies sell activity. We sell outcomes through a disciplined operating cadence and measurable reporting.
+            You always know what was done, why it matters, and what happens next.
+          </p>
+        </div>
+      </div>
+
+      <div class="proof">
+        <div class="card">
+          <span class="badge">Client experience</span>
+          <h3 style="margin-top: 10px;">Clarity, cadence, accountability</h3>
+          <p>
+            Clients stay when execution is predictable, reporting is truthful, and roadmaps are clear.
+            Our delivery is built like a system, not a set of random tasks.
+          </p>
+          <div class="quote">
+            “We finally understand what is happening in our marketing, what it costs, and what results we are buying.”
+          </div>
+          <div class="metric">
+            <div class="m">
+              <div class="v">Weekly</div>
+              <div class="l">Optimization rhythm</div>
+            </div>
+            <div class="m">
+              <div class="v">Monthly</div>
+              <div class="l">Executive reporting</div>
+            </div>
+            <div class="m">
+              <div class="v">90-day</div>
+              <div class="l">Roadmap planning</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge" style="background: rgba(15,107,110,.10); border-color: rgba(15,107,110,.22);">Growth discipline</span>
+          <h3 style="margin-top: 10px;">No wasted spend, no vague deliverables</h3>
+          <p>
+            We connect strategy to execution and execution to measurement. Paid media, content, SEO, and website conversion
+            are managed as one performance model.
+          </p>
+          <div class="hr"></div>
+          <div class="checklist">
+            <div class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Strategy that defines KPIs before channels
+            </div>
+            <div class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Production system that delivers on time with QA
+            </div>
+            <div class="check">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" stroke="rgba(29,155,108,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Reporting that explains “what changed” and “what next”
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>FAQ</h2>
+          <p>Clear answers to the questions UAE and GCC decision makers ask before hiring an agency.</p>
+        </div>
+      </div>
+
+      <div class="accordion" aria-label="Frequently asked questions">
+        <details>
+          <summary>Do you build websites and branding for new brands inside the marketing plan?</summary>
+          <div class="content">
+            Yes. New brands typically fail when branding, website, and marketing are purchased separately. Our Launch System includes
+            branding foundation and website build inside the plan so every channel is aligned to one message and one conversion model.
+          </div>
+        </details>
+
+        <details>
+          <summary>How do you prevent wasted ad spend?</summary>
+          <div class="content">
+            We start with a tracking and funnel sanity check, then structure targeting, keyword strategy, creative, landing pages, and reporting.
+            Spend is optimized weekly with clear performance notes and next actions.
+          </div>
+        </details>
+
+        <details>
+          <summary>What industries do you work with?</summary>
+          <div class="content">
+            We are strongest with businesses that need structured growth: real estate, clinics, hospitality, B2B services, and e-commerce.
+            If the offer is clear and the operational capacity exists, we can scale it.
+          </div>
+        </details>
+
+        <details>
+          <summary>What is the minimum commitment?</summary>
+          <div class="content">
+            Most retainers are a 3-month minimum. That allows time for audit, fixes, baseline performance, and controlled scaling.
+            One-time projects are delivered within the agreed timeline based on approvals.
+          </div>
+        </details>
+
+        <details>
+          <summary>How do you report results?</summary>
+          <div class="content">
+            Monthly reporting includes outcomes, insights, and next steps. We report like a business: what was done, what changed, why it matters,
+            and what we will test next month.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta">
+    <div class="container">
+      <div class="cta-wrap">
+        <div>
+          <span class="pill"><span class="dot" aria-hidden="true"></span>Ready to win UAE, then scale GCC</span>
+          <h2 style="margin-top: 10px;">Get a tailored 90-day roadmap</h2>
+          <p style="margin-top: 10px;">
+            Tell us your market, your offer, and your growth goal. We will respond with the best-fit plan and a clear execution path.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="grid-3" style="grid-template-columns: 1fr; gap: 10px;">
+            <div class="card" style="box-shadow: none; background: rgba(255,255,255,.70);">
+              <h3>What you receive after the first call</h3>
+              <p>
+                A clear recommendation: which plan fits, what will be delivered, what the first 30 days look like, and how success is measured.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form" aria-label="Lead capture form">
+          <form id="leadForm">
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Company name" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@company.com" required />
+              </div>
+              <div>
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                  <option value="" disabled selected>Select</option>
+                  <option>United Arab Emirates</option>
+                  <option>Saudi Arabia</option>
+                  <option>Qatar</option>
+                  <option>Kuwait</option>
+                  <option>Bahrain</option>
+                  <option>Oman</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="need">What do you need?</label>
+            <select id="need" name="need" required>
+              <option value="" disabled selected>Select</option>
+              <option>New brand: branding + website + launch marketing</option>
+              <option>Existing brand: performance rebuild and scaling</option>
+              <option>Specific service: SEO / PPC / Social / Email / Content</option>
+              <option>Strategy: audit and 90-day roadmap</option>
+              <option>Branding and communication strategy</option>
+              <option>PR (starting)</option>
+              <option>Market research (starting)</option>
+            </select>
+
+            <label for="message">Short context</label>
+            <textarea id="message" name="message" placeholder="Your industry, current marketing situation, and goal."></textarea>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Request a proposal</button>
+              <a class="btn" href="#packages">Compare plans</a>
+            </div>
+
+            <div id="toast" class="toast" role="status" aria-live="polite">
+              Submitted. Copy the message below and send it to your team inbox.
+            </div>
+
+            <p class="fine" style="margin-top: 10px;">
+              This page is designed for GitHub Pages. The form uses a simple copy-to-clipboard flow by default.
+              You can later connect it to your preferred email or CRM.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom: 10px;">
+          <span class="logo" aria-hidden="true"></span>
+          <span>GCC Growth Agency</span>
+        </div>
+        <p class="small">
+          Strategy-led marketing for UAE and GCC brands. Clear deliverables, transparent reporting, premium execution.
+        </p>
+        <p class="small">© <span id="year"></span> GCC Growth Agency. All rights reserved.</p>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <p class="small"><a href="#system">How it works</a></p>
+        <p class="small"><a href="#packages">Plans</a></p>
+        <p class="small"><a href="#services">Service menu</a></p>
+        <p class="small"><a href="#faq">FAQ</a></p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p class="small"><a href="#contact">Book a discovery call</a></p>
+        <p class="small"><a href="#contact">Request a proposal</a></p>
+        <p class="small">UAE-first. GCC-ready.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for internal anchors (basic)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id === "#") return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, "", id);
+    });
+  });
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Lead form: create a clean message and copy to clipboard (GitHub Pages friendly)
+  const leadForm = document.getElementById('leadForm');
+  const toast = document.getElementById('toast');
+
+  function sanitize(v){
+    return String(v || "").replace(/\s+/g, " ").trim();
+  }
+
+  leadForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(leadForm);
+    const payload = {
+      name: sanitize(data.get('name')),
+      company: sanitize(data.get('company')),
+      email: sanitize(data.get('email')),
+      country: sanitize(data.get('country')),
+      need: sanitize(data.get('need')),
+      message: sanitize(data.get('message'))
+    };
+
+    const text =
+`New lead request
+Name: ${payload.name}
+Company: ${payload.company}
+Email: ${payload.email}
+Country: ${payload.country}
+Need: ${payload.need}
+Context: ${payload.message || "N/A"}
+
+Preferred next step:
+Reply with plan recommendation, first 30 days outline, deliverables, and proposal.`;
+
+    try{
+      await navigator.clipboard.writeText(text);
+      toast.style.display = 'block';
+      toast.textContent = "Submitted. The lead summary was copied to clipboard.";
+      leadForm.reset();
+      setTimeout(()=> toast.style.display = 'none', 7000);
+    }catch(err){
+      toast.style.display = 'block';
+      toast.textContent = "Submitted. Copy the message below manually.";
+      // Show message in textarea for manual copy
+      const msg = document.getElementById('message');
+      msg.value = text;
+      msg.focus();
+      msg.select();
+      setTimeout(()=> toast.style.display = 'none', 9000);
+    }
+  });
+</script>
+
+<!--
+GITHUB PAGES QUICK DEPLOY (no extra tools required)
+1) Create a GitHub repo (for example: gcc-growth-agency-site)
+2) Add this file as: index.html
+3) Commit and push
+4) Repo Settings -> Pages -> Deploy from branch -> main -> /root
+5) Your page will be live on: https://<username>.github.io/<repo>/
+-->
+</body>
+</html>
